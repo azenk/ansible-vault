@@ -50,7 +50,7 @@
 
 - name: TLS configuration
   include: ../tasks/tls.yml
-  when: vault_tls_disable == 0
+  when: vault_tls_disable == 0 and vault_tls_manage_files
 
 - name: Listener configuration
   template:
